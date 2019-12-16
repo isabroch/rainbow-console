@@ -1,5 +1,6 @@
 # Rainbow Console
-A package that outputs logs with their rainbow-colored equivallent. As of v1.0.0, does not accept input other than strings.
+A package that outputs logs with their rainbow-colored equivallent.
+Forcefully converts all input into strings.
 
 ## Installation
 ```bash
@@ -12,3 +13,6 @@ const rainbow = require("@isabroch/rainbow-console")
 
 rainbow("Hello, World")
 ```
+
+## Issues
+Objects return as [object Object] instead of showing their properties.
