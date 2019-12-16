@@ -12,25 +12,24 @@ let format = {
 
 function colorCharacter(input, index) {
   if (input === " ") {
-    return ` `;
+    return ` `; // if space, do not give a color
   } else {
-    return `${format.rainbow[index % format.rainbow.length]}${input}${format.reset}`;
+    return `${format.rainbow[index % format.rainbow.length]}${input}${format.reset}`; // starts formatting with color that corresponds to char position in string, and then stops formatting after the char
   }
 }
 
 function colorString(input) {
-  const characters = input.split("");
-  const coloredString = characters.map(colorCharacter).join("");
+  const string = `${input}`; // forces input type to string via template literal
+  const characters = string.split(""); // creates array of each character in string
+  const coloredString = characters.map(colorCharacter).join(""); // color each character and then join into one string
 
   return coloredString;
 }
 
 function outputRainbow(input) {
-  if (typeof input !== "string") {
-    console.log(colorString('ERROR: Input was not a string!'));
-  } else {
     console.log(colorString(input));
-  }
 }
 
-module.exports = outputRainbow(input);
+module.exports = function(input) {
+  outputRainbow(input);
+}
