@@ -1,5 +1,5 @@
 # Rainbow Console
-A package that outputs logs with their rainbow-colored equivallent.
+A package that outputs logs with their rainbow-colored equivallent.\
 Forcefully converts all input into strings.
 
 ## Installation
@@ -15,4 +15,4 @@ rainbow("Hello, World")
 ```
 
 ## Issues
-Objects return as [object Object] instead of showing their properties.
+Objects return as `[object Object]` instead of showing their properties.
